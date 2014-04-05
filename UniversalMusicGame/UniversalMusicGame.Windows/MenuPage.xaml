@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="UniversalMusicGame.MenuPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UniversalMusicGame"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image Grid.RowSpan="2"  Source="/Assets/bg1.png" Stretch="UniformToFill" />
+        <Grid Grid.RowSpan="2" Background="Black" Opacity=".5"></Grid>
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,0,0,28">
+            <TextBlock Text="what's spinning?" Margin="9,-7,0,0"
+                       Foreground="White"
+                       FontSize="67"
+                        />
+            <TextBlock Text="CHOOSE A GAME"  Foreground="White" />
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid Margin="0,115,0,10" Grid.RowSpan="2">
+            <StackPanel x:Name="ContentPanel" Grid.Row="1"  Margin="12,0,12,0">
+                <Button x:Name="sayIt" Content="Name that Song!" Click="sayIt_Click" Foreground="White" BorderBrush="White"></Button>
+                <Button x:Name="albumPick" Content="Pick an Album!" Click="albumPick_Click" Foreground="White" BorderBrush="White"></Button>
+                <Button x:Name="scores" Content="High Scores" Click="scores_Click" Foreground="White" BorderBrush="White"></Button>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Bottom" Margin="12,0">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Bottom">
+                    <Button x:Name="about" Content="About" Click="about_Click" Foreground="White" BorderBrush="White"></Button>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
